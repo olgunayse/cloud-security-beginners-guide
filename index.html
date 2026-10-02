@@ -169,7 +169,7 @@
     h2{
       margin:0 0 24px;
       font-family:Georgia,serif;
-      font-size:clamp(2.3rem,3.7vw,4rem);
+      font-size:clamp(2.3rem,4.5vw,4.6rem);
       font-weight:400;
       line-height:1.02;
       letter-spacing:-2px;
@@ -221,8 +221,11 @@
     /* every topic gets a clean asymmetric content composition */
     #basics,#risks,#responsibility,#data,#management,#automation{
       display:grid;
-      grid-template-columns:minmax(360px,.95fr) minmax(0,1.35fr);
-      gap:4vw;
+      grid-template-columns:.72fr 1.28fr;
+      grid-template-rows:auto;
+      column-gap:7vw;
+      row-gap:0;
+      align-items:start;
     }
     #basics>h2,#risks>h2,#responsibility>h2,#data>h2,#management>h2,#automation>h2{
       grid-column:1;
@@ -230,10 +233,19 @@
       align-self:start;
       position:sticky;
       top:90px;
-      max-width:430px;
+      margin-bottom:0;
     }
     #basics>:not(h2),#risks>:not(h2),#responsibility>:not(h2),
-    #data>:not(h2),#management>:not(h2),#automation>:not(h2){grid-column:2}
+    #data>:not(h2),#management>:not(h2),#automation>:not(h2){
+      grid-column:2;
+      min-width:0;
+    }
+    /* Let the information side visually carry the section while the large title stays
+       pinned at left. This removes the impression of an empty right half while scrolling. */
+    #basics>.intro,#risks>.intro,#responsibility>.intro,#data>.intro,
+    #management>.intro,#automation>.intro{
+      margin-top:0;
+    }
 
     .model-grid{
       display:grid;grid-template-columns:repeat(3,1fr);
@@ -743,3 +755,12 @@
   </footer>
 </body>
 </html>
+
+<style>
+@media (min-width:851px){
+  #basics,#risks,#responsibility,#data,#management,#automation{
+    padding-top:58px;
+    padding-bottom:58px;
+  }
+}
+</style>
