@@ -498,7 +498,413 @@
   font-weight:700;
   color:#4f5965;
 }
-</style></head>
+</style><style>
+/* Organic bubble concept map */
+.bubble-map{
+  position:relative;
+  min-height:470px;
+  margin:34px 0 58px;
+  overflow:hidden;
+}
+.bubble-lines{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  z-index:0;
+  overflow:visible;
+}
+.bubble-lines path{
+  fill:none;
+  stroke:#8e9aa8;
+  stroke-width:2.2;
+  stroke-dasharray:3 10;
+  stroke-linecap:round;
+}
+.idea-bubble{
+  position:absolute;
+  z-index:2;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  padding:30px 34px;
+  color:#2b3d59;
+  border:1.5px solid rgba(43,61,89,.55);
+  box-shadow:0 9px 26px rgba(43,61,89,.035);
+}
+.idea-bubble span{
+  font-family:Georgia,serif;
+  font-size:1rem;
+  color:#788697;
+  margin-bottom:13px;
+}
+.idea-bubble h3{
+  font-family:Georgia,serif;
+  font-size:clamp(1.45rem,2.1vw,2rem);
+  font-weight:400;
+  line-height:1.04;
+  margin:0 0 12px;
+}
+.idea-bubble p{
+  margin:0;
+  color:#65717e;
+  font-size:.88rem;
+  line-height:1.35;
+}
+.bubble-one{
+  left:2%;
+  top:65px;
+  width:255px;
+  height:205px;
+  background:#dcecff;
+  border-radius:46% 54% 62% 38% / 44% 40% 60% 56%;
+  transform:rotate(-2deg);
+}
+.bubble-two{
+  left:35%;
+  top:18px;
+  width:245px;
+  height:190px;
+  background:#f8dfed;
+  border-radius:60% 40% 45% 55% / 52% 61% 39% 48%;
+  transform:rotate(2deg);
+}
+.bubble-three{
+  right:2%;
+  top:120px;
+  width:270px;
+  height:220px;
+  background:#dff2e5;
+  border-radius:40% 60% 53% 47% / 58% 43% 57% 42%;
+  transform:rotate(-1.5deg);
+}
+.bubble-four{
+  left:37%;
+  bottom:3px;
+  width:285px;
+  height:185px;
+  background:#fff0b8;
+  border-radius:57% 43% 61% 39% / 42% 56% 44% 58%;
+  transform:rotate(1deg);
+}
+@media(max-width:900px){
+  .bubble-map{
+    min-height:auto;
+    display:grid;
+    grid-template-columns:1fr;
+    gap:18px;
+    overflow:visible;
+  }
+  .bubble-lines{display:none}
+  .idea-bubble,
+  .bubble-one,.bubble-two,.bubble-three,.bubble-four{
+    position:relative;
+    inset:auto;
+    width:auto;
+    height:auto;
+    min-height:175px;
+    transform:none;
+  }
+}
+</style>
+<style>
+/* Cleaner dotted-bubble map */
+.bubble-map{
+  min-height:445px;
+  max-width:1100px;
+  margin:38px auto 58px;
+}
+.idea-bubble{
+  border:none !important;
+  box-shadow:none !important;
+  padding:28px 32px;
+}
+.bubble-one{
+  left:3%;
+  top:76px;
+  width:245px;
+  height:190px;
+  border-radius:48% 52% 56% 44% / 47% 45% 55% 53%;
+  transform:rotate(-1deg);
+}
+.bubble-two{
+  left:36%;
+  top:28px;
+  width:240px;
+  height:184px;
+  border-radius:55% 45% 47% 53% / 50% 56% 44% 50%;
+  transform:rotate(.7deg);
+}
+.bubble-three{
+  right:3%;
+  top:108px;
+  width:255px;
+  height:205px;
+  border-radius:45% 55% 51% 49% / 55% 47% 53% 45%;
+  transform:rotate(-.7deg);
+}
+.bubble-four{
+  left:38%;
+  bottom:7px;
+  width:270px;
+  height:175px;
+  border-radius:53% 47% 55% 45% / 46% 53% 47% 54%;
+  transform:rotate(.5deg);
+}
+.bubble-lines path{
+  stroke:#a2abb5;
+  stroke-width:1.8;
+  stroke-dasharray:2 9;
+  opacity:.8;
+}
+.idea-bubble span{
+  margin-bottom:10px;
+  font-size:.95rem;
+}
+.idea-bubble h3{
+  margin-bottom:9px;
+  line-height:1.08;
+}
+.idea-bubble p{
+  max-width:205px;
+}
+@media(max-width:900px){
+  .bubble-map{max-width:none; min-height:auto;}
+  .idea-bubble{padding:28px 30px;}
+}
+</style>
+<style>
+.simple-takeaway{
+  position:relative;
+  margin:68px 0 26px;
+  padding:38px 34px 30px;
+  background:#fff0b8;
+  border-radius:22px;
+}
+.simple-takeaway span{
+  position:absolute;
+  left:28px;
+  top:-15px;
+  display:inline-block;
+  padding:8px 13px;
+  background:#f8dfed;
+  border-radius:999px;
+  color:#68778b;
+  font-size:.68rem;
+  font-weight:800;
+  letter-spacing:.17em;
+}
+.simple-takeaway p{
+  max-width:1050px;
+  margin:0;
+  font-family:Georgia,serif;
+  font-size:clamp(1.25rem,1.8vw,1.65rem);
+  line-height:1.45;
+  color:#2b3d59;
+}
+.simple-takeaway strong{font-weight:700}
+@media(max-width:800px){
+  .simple-takeaway{padding:25px 24px}
+}
+</style><style>
+/* Simple but distinctive six-part index */
+.six-paths{
+  margin-top:42px;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:14px;
+}
+.path-item{
+  position:relative;
+  min-height:170px;
+  padding:25px 27px 24px;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-end;
+  text-decoration:none;
+  color:#2b3d59;
+  overflow:hidden;
+  border-radius:26px;
+  transition:transform .18s ease;
+}
+.path-item:hover{transform:translateY(-3px)}
+.path-item::before{
+  content:"";
+  position:absolute;
+  width:92px;
+  height:92px;
+  right:-28px;
+  top:-30px;
+  border-radius:50%;
+  background:rgba(255,255,255,.45);
+}
+.path-num{
+  position:absolute;
+  top:22px;
+  left:25px;
+  font-family:Georgia,serif;
+  font-size:.92rem;
+  color:#748296;
+}
+.path-title{
+  position:relative;
+  z-index:1;
+  font-family:Georgia,serif;
+  font-size:1.55rem;
+  line-height:1.08;
+  margin-bottom:7px;
+}
+.path-desc{
+  position:relative;
+  z-index:1;
+  max-width:270px;
+  color:#66717e;
+  font-size:.84rem;
+  line-height:1.4;
+}
+.path-blue{background:#dcecff}
+.path-pink{background:#f8dfed}
+.path-green{background:#dff2e5}
+.path-yellow{background:#fff0b8}
+
+/* Make the grid feel designed rather than six identical cards */
+.path-item:nth-child(2),
+.path-item:nth-child(5){border-radius:48px 26px 48px 26px}
+.path-item:nth-child(3),
+.path-item:nth-child(4){border-radius:26px 48px 26px 48px}
+
+@media(max-width:900px){
+  .six-paths{grid-template-columns:1fr 1fr}
+}
+@media(max-width:600px){
+  .six-paths{grid-template-columns:1fr}
+  .path-item{min-height:145px}
+}
+</style>
+<style>
+/* More natural section labels */
+.eyebrow, .kicker, .section-label, .section-kicker, .overline {
+  text-transform: none !important;
+  letter-spacing: .02em !important;
+  font-weight: 600 !important;
+}
+</style>
+<style>
+/* Redesigned synthesis connections: simple, staggered editorial layout */
+.connections-redesign{
+  display:flex;
+  flex-direction:column;
+  gap:22px;
+  margin:42px 0 60px;
+}
+.connection-feature{
+  display:grid;
+  grid-template-columns:minmax(300px,.8fr) minmax(420px,1.2fr);
+  gap:55px;
+  align-items:start;
+  padding:34px 40px;
+  border-radius:28px;
+}
+.connection-feature:nth-child(2){
+  margin-left:7%;
+  margin-right:2%;
+}
+.connection-feature:nth-child(3){
+  margin-left:2%;
+  margin-right:7%;
+}
+.connection-blue{background:#e7f1fb}
+.connection-pink{background:#f9e8f0}
+.connection-green{background:#e6f3e9}
+
+.connection-heading{
+  position:relative;
+  padding-top:34px;
+}
+.connection-heading span{
+  position:absolute;
+  top:0;
+  left:0;
+  font-family:Georgia,serif;
+  font-size:.9rem;
+  color:#7b8899;
+}
+.connection-heading h3{
+  margin:0;
+  font-family:Georgia,serif;
+  font-size:clamp(1.6rem,2.2vw,2.35rem);
+  font-weight:400;
+  line-height:1.08;
+  color:#2b3d59;
+}
+.connection-feature p{
+  margin:0;
+  padding-top:31px;
+  font-size:1rem;
+  line-height:1.75;
+  color:#5f6b79;
+  max-width:720px;
+}
+@media(max-width:850px){
+  .connection-feature{
+    grid-template-columns:1fr;
+    gap:12px;
+    padding:28px;
+  }
+  .connection-feature:nth-child(2),
+  .connection-feature:nth-child(3){
+    margin-left:0;
+    margin-right:0;
+  }
+  .connection-feature p{padding-top:0}
+}
+</style><style>
+.connections-redesign .connection-heading{
+  padding-top:0 !important;
+}
+.connections-redesign .connection-feature p{
+  padding-top:0 !important;
+}
+</style>
+<style>
+.hero-rotator{
+  display:inline-grid;
+  vertical-align:bottom;
+  overflow:hidden;
+  height:1.35em;
+  min-width:11.5em;
+}
+.hero-rotator > span{
+  grid-area:1/1;
+  opacity:0;
+  transform:translateY(70%);
+  animation:heroWordRotate 12.5s infinite;
+}
+.hero-rotator > span:nth-child(1){animation-delay:0s}
+.hero-rotator > span:nth-child(2){animation-delay:2.5s}
+.hero-rotator > span:nth-child(3){animation-delay:5s}
+.hero-rotator > span:nth-child(4){animation-delay:7.5s}
+.hero-rotator > span:nth-child(5){animation-delay:10s}
+
+@keyframes heroWordRotate{
+  0%{opacity:0;transform:translateY(70%)}
+  5%,16%{opacity:1;transform:translateY(0)}
+  20%,100%{opacity:0;transform:translateY(-70%)}
+}
+@media (prefers-reduced-motion: reduce){
+  .hero-rotator > span{animation:none;opacity:0;transform:none}
+  .hero-rotator > span:first-child{opacity:1}
+}
+</style>
+
+<style>
+.hero-rotator{
+  vertical-align:-0.08em !important;
+  transform:translateY(-0.10em);
+}
+</style>
+
+</head>
 <body>
 <header class="modern-hero">
 <div class="hero-navline">
@@ -507,9 +913,9 @@
 </div>
 <div class="hero-content">
 <div class="hero-copy">
-<p class="hero-kicker">CLOUD SECURITY, MADE CLEAR</p>
-<h1>Understand the cloud.<br/><span>Protect what matters.</span></h1>
-<p class="hero-deck">A visual beginner's guide to cloud services, security risks, shared responsibility, data protection, and the practices that connect them.</p>
+<p class="hero-kicker">AYSE OLGUNDENEY · PROJECT 2</p>
+<h1>Understand the cloud.<br/></h1>
+<p class="hero-deck"><span class="hero-static">A beginner's guide to </span><span class="hero-rotator"><span>cloud services.</span><span>security risks.</span><span>shared responsibility.</span><span>data protection.</span><span>security practices.</span></span></p>
 <div class="hero-actions">
 <a class="primary-action" href="#basics">Start the guide <span>→</span></a>
 <a class="text-action" href="#sources">View sources</a>
@@ -543,10 +949,10 @@
 <main>
 <section id="about">
 <div>
-<p class="eyebrow">START HERE</p>
+<p class="eyebrow"></p>
 <h2>Security is more than stopping hackers.</h2>
 <div class="audience-card">
-<span>WHO THIS GUIDE IS FOR</span>
+<span></span>
 <p>This guide is for students and other beginners who use cloud-based services but do not have a technical background in cloud security. It focuses on the ideas that help a beginner understand what they are responsible for, where common risks come from, and how the different parts of cloud security connect.</p>
 </div>
 </div>
@@ -561,18 +967,6 @@
         technology or cloud computing but are new to cloud security. It breaks the topic into
         smaller sections so the different parts are easier to understand.
       </p>
-</div>
-</section>
-<section class="overview">
-<p class="eyebrow">WHAT YOU'LL LEARN</p>
-<h2>Six parts of cloud security</h2>
-<div class="overview-grid">
-<a href="#basics"><span>01</span><strong>Cloud Basics</strong><small>Service models and why they matter</small></a>
-<a href="#risks"><span>02</span><strong>Security Risks</strong><small>Access, configuration, and vulnerabilities</small></a>
-<a href="#responsibility"><span>03</span><strong>Responsibility</strong><small>What providers and customers manage</small></a>
-<a href="#data"><span>04</span><strong>Data &amp; Access</strong><small>Protecting information and permissions</small></a>
-<a href="#management"><span>05</span><strong>Management</strong><small>Frameworks and ongoing security</small></a>
-<a href="#automation"><span>06</span><strong>Automation</strong><small>Reducing mistakes and checking controls</small></a>
 </div>
 </section>
 <section id="basics">
@@ -751,55 +1145,55 @@
       </p>
 <p class="source-note"><strong>Sources used:</strong> NIST <em>Cloud Security Automation Framework</em> and the CIS <em>Amazon Web Services Foundations Benchmark</em>.</p>
 </section>
-
 <section class="connections-section" id="connections">
 <span class="eyebrow">PUTTING IT TOGETHER</span>
 <h2>Cloud security works as a system.</h2>
 <p class="connections-lead">The biggest pattern across these topics is that cloud security is not one tool or one responsibility. The service model changes what the customer manages, which changes where risk appears. Those risks make identity, permissions, and configuration important, while frameworks and automation help keep those decisions consistent over time.</p>
-<div class="connection-flow">
-<div class="connection-node blue-node">
-<span>01</span>
-<strong>Service model</strong>
+<div aria-label="How the major cloud security ideas connect" class="bubble-map">
+<svg aria-hidden="true" class="bubble-lines" preserveaspectratio="none" viewbox="0 0 1000 440">
+<path d="M220 125 C330 55, 405 80, 490 145"></path>
+<path d="M490 145 C610 220, 650 250, 770 210"></path>
+<path d="M770 210 C690 315, 565 360, 455 330"></path>
+</svg>
+<article class="idea-bubble bubble-one">
+<h3>Service model</h3>
 <p>determines what you manage</p>
-</div>
-<div class="flow-arrow">→</div>
-<div class="connection-node pink-node">
-<span>02</span>
-<strong>Responsibility</strong>
+</article>
+<article class="idea-bubble bubble-two">
+<h3>Responsibility</h3>
 <p>shows what you must protect</p>
-</div>
-<div class="flow-arrow">→</div>
-<div class="connection-node green-node">
-<span>03</span>
-<strong>Access + configuration</strong>
+</article>
+<article class="idea-bubble bubble-three">
+<h3>Access +<br/>configuration</h3>
 <p>shape where risk appears</p>
-</div>
-<div class="flow-arrow">→</div>
-<div class="connection-node yellow-node">
-<span>04</span>
-<strong>Management + automation</strong>
+</article>
+<article class="idea-bubble bubble-four">
+<h3>Management +<br/>automation</h3>
 <p>help controls stay consistent</p>
-</div>
+</article>
 </div>
 <p class="connection-source-note"><strong>Connections drawn from:</strong> NIST cloud-computing guidance, AWS and Microsoft Azure shared-responsibility guidance, OWASP Top 10, CISA's Cloud Security Technical Reference Architecture, NIST's Cloud Security Automation Framework, NIST CSF 2.0, the Cloud Controls Matrix, and the CIS AWS Foundations Benchmark.</p>
-<div class="synthesis-takeaways">
-<article>
-<span>CONNECTION 01</span>
+<div class="connections-redesign">
+<article class="connection-feature connection-blue">
+<div class="connection-heading">
 <h3>Less infrastructure does not mean no responsibility.</h3>
+</div>
 <p>Microsoft Azure's shared responsibility guidance shows that as cloud services move from IaaS toward SaaS, the provider manages more of the underlying technology, but the customer's role does not disappear. AWS makes the same idea easier to see by separating provider infrastructure from customer responsibilities such as data, accounts, applications, and security settings. Together, these sources show that responsibility changes rather than simply going away.</p>
 </article>
-<article>
-<span>CONNECTION 02</span>
+<article class="connection-feature connection-pink">
+<div class="connection-heading">
 <h3>Many cloud risks meet at access and configuration.</h3>
+</div>
 <p>The OWASP Top 10 helped me connect access control and security misconfigurations with a broader idea from the CISA architecture guidance: security depends on how a cloud environment is planned and managed, not only on responding to attacks. Looking at these sources together shows why a fairly simple access or configuration decision can affect more than one part of cloud security.</p>
 </article>
-<article>
-<span>CONNECTION 03</span>
+<article class="connection-feature connection-green">
+<div class="connection-heading">
 <h3>Automation supports security; it does not replace judgment.</h3>
+</div>
 <p>The Cloud Security Automation Framework explains how automation can help apply and check security controls, especially when manual configuration creates opportunities for error. The CIS AWS benchmark adds the practical side by showing specific settings that may need to be checked. At the same time, the benchmark notes that organizations still have to consider their own systems and security needs, so automation supports security decisions rather than replacing them.</p>
 </article>
 </div>
-<div class="final-takeaway">
+<div class="simple-takeaway">
 <span>THE BEGINNER TAKEAWAY</span>
 <p>Instead of trying to memorize every cloud-security term, start by asking four questions: <strong>What am I using? What am I responsible for? Who has access? How are those protections checked over time?</strong> Those questions connect the major ideas in this guide and give beginners a practical way to think through cloud security.</p>
 </div>
