@@ -896,14 +896,26 @@
   .hero-rotator > span:first-child{opacity:1}
 }
 </style>
-
 <style>
 .hero-rotator{
   vertical-align:-0.08em !important;
   transform:translateY(-0.10em);
 }
 </style>
-
+<style>
+/* Simpler, more natural editorial treatment for the takeaway heading */
+.takeaway-tab {
+  border-radius: 0 !important;
+  background: transparent !important;
+  padding: 0 !important;
+  letter-spacing: 0 !important;
+  text-transform: none !important;
+  font-family: Georgia, "Times New Roman", serif !important;
+  font-weight: 400 !important;
+  color: #000032 !important;
+  box-shadow: none !important;
+}
+</style>
 </head>
 <body>
 <header class="modern-hero">
@@ -1193,10 +1205,7 @@
 <p>The Cloud Security Automation Framework explains how automation can help apply and check security controls, especially when manual configuration creates opportunities for error. The CIS AWS benchmark adds the practical side by showing specific settings that may need to be checked. At the same time, the benchmark notes that organizations still have to consider their own systems and security needs, so automation supports security decisions rather than replacing them.</p>
 </article>
 </div>
-<div class="simple-takeaway">
-<span>THE BEGINNER TAKEAWAY</span>
-<p>Instead of trying to memorize every cloud-security term, start by asking four questions: <strong>What am I using? What am I responsible for? Who has access? How are those protections checked over time?</strong> Those questions connect the major ideas in this guide and give beginners a practical way to think through cloud security.</p>
-</div>
+
 </section>
 <section id="sources">
 <h2>Sources Used</h2>
