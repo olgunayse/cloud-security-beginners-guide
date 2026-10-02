@@ -116,6 +116,31 @@
       color: #6b7780;
       font-size: .9rem;
     }
+    .source-note {
+      margin-top: 24px;
+      padding-top: 16px;
+      border-top: 1px solid #e4eaee;
+      color: #65737d;
+      font-size: .88rem;
+    }
+    .sources-list {
+      display: grid;
+      gap: 10px;
+      margin-top: 24px;
+    }
+    .sources-list a {
+      display: block;
+      padding: 13px 15px;
+      background: #f4f8fa;
+      border: 1px solid #dde7eb;
+      border-radius: 9px;
+      color: #31566d;
+      text-decoration: none;
+    }
+    .sources-list a:hover {
+      text-decoration: underline;
+      background: #edf4f6;
+    }
     @media (max-width: 700px) {
       header { padding: 65px 7% 55px; }
       nav { padding: 12px 7%; }
@@ -139,6 +164,7 @@
     <a href="#data">Data & Access</a>
     <a href="#management">Management</a>
     <a href="#automation">Automation</a>
+    <a href="#sources">Sources</a>
   </nav>
 
   <main>
@@ -186,6 +212,7 @@
         <strong>Key idea</strong>
         Moving to the cloud changes how security responsibilities are divided. It does not make those responsibilities disappear.
       </div>
+      <p class="source-note"><strong>Sources used:</strong> NIST, <em>The NIST Definition of Cloud Computing</em> and <em>Cloud Computing Synopsis and Recommendations</em>.</p>
     </section>
 
     <section id="risks">
@@ -203,6 +230,7 @@
         <strong>Why this matters</strong>
         A weakness can already exist because of the way a system was configured or managed, even before anyone tries to attack it.
       </div>
+      <p class="source-note"><strong>Sources used:</strong> OWASP Top 10: 2025 and CISA's <em>Cloud Security Technical Reference Architecture</em>.</p>
     </section>
 
     <section id="responsibility">
@@ -229,6 +257,7 @@
         <strong>Remember this</strong>
         A secure cloud provider does not automatically mean everything a customer puts in the cloud is securely configured.
       </div>
+      <p class="source-note"><strong>Sources used:</strong> AWS <em>Shared Responsibility Model</em> and Microsoft Azure <em>Shared Responsibility in the Cloud</em>.</p>
     </section>
 
     <section id="data">
@@ -252,6 +281,7 @@
         Protecting data and controlling access are closely connected. If access is not managed
         carefully, the information itself can become harder to protect.
       </p>
+      <p class="source-note"><strong>Sources used:</strong> NIST, <em>Guidelines on Security and Privacy in Public Cloud Computing</em> and Google Cloud's <em>Security, Privacy, and Compliance Pillar</em>.</p>
     </section>
 
     <section id="management">
@@ -272,6 +302,7 @@
         logging, and incident management. Together, these frameworks show that cloud security
         depends on several areas working together.
       </p>
+      <p class="source-note"><strong>Sources used:</strong> NIST <em>Cybersecurity Framework (CSF) 2.0</em> and the Cloud Security Alliance <em>Cloud Controls Matrix</em>.</p>
     </section>
 
     <section id="automation">
@@ -293,20 +324,52 @@
         settings in AWS. Frameworks, benchmarks, and automation serve different purposes, but they
         can work together to make cloud security more consistent.
       </p>
+      <p class="source-note"><strong>Sources used:</strong> NIST <em>Cloud Security Automation Framework</em> and the CIS <em>Amazon Web Services Foundations Benchmark</em>.</p>
     </section>
 
     <section>
       <h2>Putting the Pieces Together</h2>
       <p>
-        Cloud security is not one setting, tool, or person's responsibility. It depends on
-        understanding the cloud service being used, recognizing common risks, knowing which
-        responsibilities belong to the provider and customer, protecting data and access, and
-        managing security over time.
+        Looking across these different areas shows that cloud security is not one setting, tool,
+        or person's responsibility. The service model affects responsibility, responsibility
+        affects which controls the customer must manage, and those controls affect how well data,
+        accounts, and applications are protected.
       </p>
       <p>
-        The next update will improve the guide's visual design and add clearer takeaways before
-        the final sources and reference section is added.
+        The same connection appears when looking at security mistakes. Access problems and
+        misconfigurations can create weaknesses, while frameworks, benchmarks, monitoring, and
+        automation can help organizations manage those weaknesses more consistently. None of
+        these practices works as a complete solution by itself.
       </p>
+      <div class="callout">
+        <strong>Main takeaway</strong>
+        Cloud security works best as a group of connected decisions about technology, people,
+        data, responsibility, and risk. Understanding how those pieces connect makes the more
+        technical parts of cloud security easier to approach.
+      </div>
+    </section>
+
+    <section id="sources">
+      <h2>Sources & Further Reading</h2>
+      <p>
+        This guide was built from a curated collection of government guidance, security
+        frameworks, cloud-provider documentation, and technical resources. The links below can
+        be used to explore any of the topics in more detail.
+      </p>
+      <div class="sources-list">
+        <a href="https://www.nist.gov/publications/nist-definition-cloud-computing" target="_blank">NIST — The NIST Definition of Cloud Computing</a>
+        <a href="https://www.nist.gov/publications/cloud-computing-synopsis-and-recommendations" target="_blank">NIST — Cloud Computing Synopsis and Recommendations</a>
+        <a href="https://top10.owasp.org/2025/" target="_blank">OWASP — Top 10: 2025</a>
+        <a href="https://www.cisa.gov/sites/default/files/2023-02/cloud_security_technical_reference_architecture_2.pdf" target="_blank">CISA — Cloud Security Technical Reference Architecture</a>
+        <a href="https://aws.amazon.com/compliance/shared-responsibility-model/" target="_blank">AWS — Shared Responsibility Model</a>
+        <a href="https://learn.microsoft.com/en-us/azure/security/fundamentals/shared-responsibility" target="_blank">Microsoft Azure — Shared Responsibility in the Cloud</a>
+        <a href="https://www.nist.gov/publications/guidelines-security-and-privacy-public-cloud-computing" target="_blank">NIST — Guidelines on Security and Privacy in Public Cloud Computing</a>
+        <a href="https://docs.cloud.google.com/architecture/framework/security" target="_blank">Google Cloud — Security, Privacy, and Compliance Pillar</a>
+        <a href="https://www.nist.gov/cyberframework" target="_blank">NIST — Cybersecurity Framework (CSF) 2.0</a>
+        <a href="https://cloudsecurityalliance.org/research/cloud-controls-matrix" target="_blank">Cloud Security Alliance — Cloud Controls Matrix</a>
+        <a href="https://www.nist.gov/publications/cloud-security-automation-framework" target="_blank">NIST — Cloud Security Automation Framework</a>
+        <a href="https://www.cisecurity.org/benchmark/amazon_web_services" target="_blank">CIS — Amazon Web Services Foundations Benchmark</a>
+      </div>
     </section>
   </main>
 
