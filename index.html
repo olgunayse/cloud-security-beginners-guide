@@ -291,6 +291,15 @@
         have to think about how their systems are designed, configured, and managed before a
         security problem happens.
       </p>
+      <h3>A simple example</h3>
+      <p>
+        Imagine an organization stores files in a cloud service. The cloud provider's infrastructure
+        may be secure, but the organization could still create a problem if a storage setting is
+        configured incorrectly or if too many users are given access. In that situation, the risk
+        comes from the way the service is being used rather than from the cloud provider's physical
+        infrastructure. This is why access control and configuration need attention before an
+        incident occurs.
+      </p>
       <div class="callout">
         <strong>Why this matters</strong>
         A weakness can already exist because of the way a system was configured or managed, even before anyone tries to attack it.
@@ -317,6 +326,14 @@
         changes depending on whether the service is IaaS, PaaS, or SaaS. As the provider manages
         more of the technology, the customer may manage less of the underlying system, but
         responsibilities involving data and accounts still remain important.
+      </p>
+      <h3>What this looks like in practice</h3>
+      <p>
+        With IaaS, a customer has more control over the systems running on the provider's
+        infrastructure, which also means the customer has more security decisions to make. With
+        SaaS, the provider manages more of the technology, but the customer still has to think
+        about areas such as its users, accounts, permissions, and data. The exact dividing line
+        changes, but shared responsibility is still present.
       </p>
       <div class="callout">
         <strong>Remember this</strong>
@@ -346,6 +363,12 @@
         Protecting data and controlling access are closely connected. If access is not managed
         carefully, the information itself can become harder to protect.
       </p>
+      <p>
+        This also means access decisions should not be treated as permanent. As people change
+        roles or no longer need certain resources, organizations need to keep track of whether
+        their permissions still make sense. Monitoring adds another part to this process because
+        it can help an organization notice activity that may need to be investigated.
+      </p>
       <p class="source-note"><strong>Sources used:</strong> NIST, <em>Guidelines on Security and Privacy in Public Cloud Computing</em> and Google Cloud's <em>Security, Privacy, and Compliance Pillar</em>.</p>
     </section>
 
@@ -366,6 +389,15 @@
         across areas such as data security, identity and access management, infrastructure,
         logging, and incident management. Together, these frameworks show that cloud security
         depends on several areas working together.
+      </p>
+      <h3>Why organization matters</h3>
+      <p>
+        Without some kind of structure, it would be difficult to keep track of every part of a
+        cloud environment that needs attention. A framework gives organizations a way to organize
+        their security work, while a set of cloud-specific controls can help them look more closely
+        at individual areas. This also reinforces an idea that appears throughout this guide:
+        security has to be considered before a problem happens, but organizations also need a plan
+        for monitoring and responding when something does go wrong.
       </p>
       <p class="source-note"><strong>Sources used:</strong> NIST <em>Cybersecurity Framework (CSF) 2.0</em> and the Cloud Security Alliance <em>Cloud Controls Matrix</em>.</p>
     </section>
@@ -388,6 +420,14 @@
         Foundations Benchmark, for example, provides practical recommendations for security
         settings in AWS. Frameworks, benchmarks, and automation serve different purposes, but they
         can work together to make cloud security more consistent.
+      </p>
+      <h3>Automation helps, but it does not make the decisions</h3>
+      <p>
+        Automation is useful for repetitive work, especially when the same controls or settings
+        need to be checked across a larger environment. However, an organization still has to
+        decide what should be protected, which controls make sense, and what should happen when a
+        problem is found. In other words, automation can make security practices more consistent,
+        but it does not replace the planning behind those practices.
       </p>
       <p class="source-note"><strong>Sources used:</strong> NIST <em>Cloud Security Automation Framework</em> and the CIS <em>Amazon Web Services Foundations Benchmark</em>.</p>
     </section>
