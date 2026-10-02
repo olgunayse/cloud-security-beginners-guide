@@ -116,6 +116,56 @@
       color: #6b7780;
       font-size: .9rem;
     }
+    .overview {
+      background: transparent;
+      border: 0;
+      box-shadow: none;
+      padding: 8px 0 18px;
+    }
+    .eyebrow {
+      color: #6b8795;
+      font-size: .75rem;
+      font-weight: bold;
+      letter-spacing: 1.6px;
+      margin-bottom: 5px;
+    }
+    .overview-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-top: 22px;
+    }
+    .overview-grid a {
+      min-height: 145px;
+      background: white;
+      border: 1px solid #e0e8ec;
+      border-radius: 14px;
+      padding: 20px;
+      color: #25313a;
+      text-decoration: none;
+      box-shadow: 0 5px 18px rgba(32,55,70,.04);
+      transition: transform .15s ease, box-shadow .15s ease;
+    }
+    .overview-grid a:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 22px rgba(32,55,70,.08);
+    }
+    .overview-grid span {
+      display: block;
+      color: #7696a3;
+      font-size: .8rem;
+      font-weight: bold;
+      margin-bottom: 12px;
+    }
+    .overview-grid strong {
+      display: block;
+      color: #294b60;
+      margin-bottom: 5px;
+    }
+    .overview-grid small {
+      color: #697780;
+      line-height: 1.4;
+    }
     .source-note {
       margin-top: 24px;
       padding-top: 16px;
@@ -146,6 +196,8 @@
       nav { padding: 12px 7%; }
       section { padding: 26px 22px; }
       .model-grid { grid-template-columns: 1fr; }
+      .overview-grid { grid-template-columns: 1fr; }
+      .overview-grid a { min-height: auto; }
     }
   </style>
 </head>
@@ -180,6 +232,19 @@
         technology or cloud computing but are new to cloud security. It breaks the topic into
         smaller sections so the different parts are easier to understand.
       </p>
+    </section>
+
+    <section class="overview">
+      <p class="eyebrow">WHAT YOU'LL LEARN</p>
+      <h2>Six parts of cloud security</h2>
+      <div class="overview-grid">
+        <a href="#basics"><span>01</span><strong>Cloud Basics</strong><small>Service models and why they matter</small></a>
+        <a href="#risks"><span>02</span><strong>Security Risks</strong><small>Access, configuration, and vulnerabilities</small></a>
+        <a href="#responsibility"><span>03</span><strong>Responsibility</strong><small>What providers and customers manage</small></a>
+        <a href="#data"><span>04</span><strong>Data & Access</strong><small>Protecting information and permissions</small></a>
+        <a href="#management"><span>05</span><strong>Management</strong><small>Frameworks and ongoing security</small></a>
+        <a href="#automation"><span>06</span><strong>Automation</strong><small>Reducing mistakes and checking controls</small></a>
+      </div>
     </section>
 
     <section id="basics">
@@ -374,7 +439,8 @@
   </main>
 
   <footer>
-    Cloud Security for Beginners · CMPA 4301
+    <strong>Cloud Security for Beginners</strong><br>
+    Understanding the Basics, Risks, and Responsibilities · CMPA 4301
   </footer>
 </body>
 </html>
